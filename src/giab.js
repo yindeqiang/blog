@@ -1,4 +1,3 @@
-// var GitHubApi = require('github')
 var GitHubApi = require('@octokit/rest')
 var Promise = require('bluebird')
 
