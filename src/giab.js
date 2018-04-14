@@ -20,7 +20,6 @@ exports.init = function(rc) {
           reject(err)
           return
         }
-        console.log(list);
         // github api treat pr as issue
         resolve(list.data.filter(function(item) {
           return item.pull_request === undefined

@@ -28,9 +28,11 @@ exports.formatIssueItem = function formatIssueItem(item) {
   var flag = item.comments >= CONST.MIN_HEART_SIZE ? CONST.HEART_FLAG :
     repeat(CONST.FIRE_LAG, Math.floor(item.comments / divNum))
   // return `> * [${date} ${flag} ${item.title}](${item.html_url})`
-  return `<li>
-            <a href="${item.html_url}" target="_blank">
-              <span>[${date}]</span> ${flag} ${item.title}
-            </a>
-          </li>`
+  return 
+  `<li>
+    <span>[${date}]</span>
+    <a href="${item.html_url}" target="_blank">
+      ${flag} ${item.title}
+    </a>
+  </li>`
 }
